@@ -9,7 +9,7 @@ public class Playlist implements Serializable {
 
     private Integer id;
 
-    private Map<Artist, Song> playlist = new HashMap<>();
+    private Map<Artist, Song> playlistMap = new HashMap<>();
 
     public Playlist() {
     }
@@ -26,12 +26,12 @@ public class Playlist implements Serializable {
         this.id = id;
     }
 
-    public Map<Artist, Song> getPlaylist() {
-        return playlist;
+    public Map<Artist, Song> getPlaylistMap() {
+        return playlistMap;
     }
 
-    public void setPlaylist(Map<Artist, Song> playlist) {
-        this.playlist = playlist;
+    public void setPlaylistMap(Map<Artist, Song> playlistMap) {
+        this.playlistMap = playlistMap;
     }
 
     @Override

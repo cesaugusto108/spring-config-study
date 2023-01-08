@@ -17,7 +17,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public void play() {
-        Map<Artist, Song> playlist = playerBootstrap.getPlaylist().getPlaylist();
+        Map<Artist, Song> playlist = playerBootstrap.getPlaylist().getPlaylistMap();
 
         List<Song> songs = new ArrayList<>();
 
@@ -25,14 +25,16 @@ public class PlayerServiceImpl implements PlayerService {
             songs.add(artistSongEntry.getValue());
         }
 
-        System.out.println("Now playing: ");
+        System.out.println("\n" + playerBootstrap.getPlaylist() + ":");
 
-        System.out.println(songs.get(0) + " /" + songs.get(0).getArtist());
+        System.out.println("\nNow playing: ");
 
-        System.out.println("Up next:");
+        System.out.println(songs.get(0));
 
-        for (Song song : songs) {
-            System.out.println(song + " / " + song.getArtist());
+        System.out.println("\nUp next:");
+
+        for (int i = 1; i < songs.size(); i++) {
+            System.out.println(songs.get(i));
         }
     }
 }
