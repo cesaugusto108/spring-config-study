@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "ces.augusto108.musicplayer.config")
+@ComponentScan(basePackages = {"ces.augusto108.musicplayer.config", "ces.augusto108.musicplayer.controllers"})
 public class MusicPlayerApplication {
     public static void main(String[] args) {
         ApplicationContext applicationContext = SpringApplication.run(MusicPlayerApplication.class, args);

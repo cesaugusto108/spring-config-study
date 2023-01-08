@@ -8,12 +8,15 @@ public class Song implements Serializable {
     private String title;
     private Artist artist;
 
+    private Genre genre;
+
     public Song() {
     }
 
-    public Song(String title, Artist artist) {
+    public Song(String title, Artist artist, Genre genre) {
         this.title = title;
         this.artist = artist;
+        this.genre = genre;
     }
 
     public String getTitle() {
@@ -32,8 +35,16 @@ public class Song implements Serializable {
         this.artist = artist;
     }
 
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+
     @Override
     public String toString() {
-        return "Artist: " + artist + " / Song: " + title;
+        return "Artist: " + artist + " / Song: " + title + " / Genre: " + genre;
     }
 }
