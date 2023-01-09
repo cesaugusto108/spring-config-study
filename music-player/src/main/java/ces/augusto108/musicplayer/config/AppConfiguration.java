@@ -9,32 +9,37 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class AppConfiguration {
     @Bean
+    PlayerBootstrap playerBootstrap() {
+        return new PlayerBootstrap();
+    }
+
+    @Bean
     @Profile("default")
-    public PlayerServiceImpl playerServiceImpl() {
-        return new PlayerServiceImpl(new PlayerBootstrap());
+    PlayerServiceImpl playerServiceImpl(PlayerBootstrap playerBootstrap) {
+        return new PlayerServiceImpl(playerBootstrap);
     }
 
     @Bean
     @Profile("easy")
-    public EasyListeningPlayerService easyListeningPlayerService() {
-        return new EasyListeningPlayerService(new PlayerBootstrap());
+    EasyListeningPlayerService easyListeningPlayerService(PlayerBootstrap playerBootstrap) {
+        return new EasyListeningPlayerService(playerBootstrap);
     }
 
     @Bean
     @Profile("brit")
-    public BritPopPlayerService britPopPlayerService() {
-        return new BritPopPlayerService(new PlayerBootstrap());
+    BritPopPlayerService britPopPlayerService(PlayerBootstrap playerBootstrap) {
+        return new BritPopPlayerService(playerBootstrap);
     }
 
     @Bean
     @Profile("alternative")
-    public AlternativeRockPlayerService alternativeRockPlayerService() {
-        return new AlternativeRockPlayerService(new PlayerBootstrap());
+    AlternativeRockPlayerService alternativeRockPlayerService(PlayerBootstrap playerBootstrap) {
+        return new AlternativeRockPlayerService(playerBootstrap);
     }
 
     @Bean
     @Profile("hard")
-    public HardRockPlayerService hardRockPlayerService() {
-        return new HardRockPlayerService(new PlayerBootstrap());
+    HardRockPlayerService hardRockPlayerService(PlayerBootstrap playerBootstrap) {
+        return new HardRockPlayerService(playerBootstrap);
     }
 }
