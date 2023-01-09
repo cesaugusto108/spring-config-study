@@ -2,6 +2,7 @@ package ces.augusto108.musicplayer.services;
 
 import ces.augusto108.musicplayer.bootstrap.PlayerBootstrap;
 import ces.augusto108.musicplayer.model.Artist;
+import ces.augusto108.musicplayer.model.MusicGenre;
 import ces.augusto108.musicplayer.model.Song;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class BritPopPlayerService implements PlayerService {
         List<Song> britPopSongs = new ArrayList<>();
 
         for (Song song : songs) {
-            if (song.getGenre().getId() == 2) britPopSongs.add(song);
+            if (song.getGenre().equals(MusicGenre.BRIT_POP)) britPopSongs.add(song);
         }
 
         System.out.println("\n" + playerBootstrap.getPlaylist() + ":");

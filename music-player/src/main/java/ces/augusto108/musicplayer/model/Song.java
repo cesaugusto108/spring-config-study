@@ -8,12 +8,12 @@ public class Song implements Serializable {
     private String title;
     private Artist artist;
 
-    private Genre genre;
+    private MusicGenre genre;
 
     public Song() {
     }
 
-    public Song(String title, Artist artist, Genre genre) {
+    public Song(String title, Artist artist, MusicGenre genre) {
         this.title = title;
         this.artist = artist;
         this.genre = genre;
@@ -35,11 +35,11 @@ public class Song implements Serializable {
         this.artist = artist;
     }
 
-    public Genre getGenre() {
+    public MusicGenre getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(MusicGenre genre) {
         this.genre = genre;
     }
 

@@ -1,34 +1,26 @@
 package ces.augusto108.musicplayer.bootstrap;
 
-import ces.augusto108.musicplayer.model.Artist;
-import ces.augusto108.musicplayer.model.Genre;
-import ces.augusto108.musicplayer.model.Playlist;
-import ces.augusto108.musicplayer.model.Song;
+import ces.augusto108.musicplayer.model.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class PlayerBootstrap {
     public Playlist getPlaylist() {
-        Genre g1 = new Genre(1, "Easy listening");
-        Genre g2 = new Genre(2, "Brit Pop");
-        Genre g3 = new Genre(3, "Alternative Rock");
-        Genre g4 = new Genre(4, "Hard Rock");
-
         Artist a1 = new Artist("Lighthouse Family");
-        Song s1 = new Song("Lifted", a1, g1);
+        Song s1 = new Song("Lifted", a1, MusicGenre.EASY_LISTENING);
 
         Artist a2 = new Artist("Dido");
-        Song s2 = new Song("White flag", a2, g2);
+        Song s2 = new Song("White flag", a2, MusicGenre.BRIT_POP);
 
         Artist a3 = new Artist("Take that");
-        Song s3 = new Song("Back for good", a3, g2);
+        Song s3 = new Song("Back for good", a3, MusicGenre.BRIT_POP);
 
         Artist a4 = new Artist("Hoobastank");
-        Song s4 = new Song("The reason", a4, g3);
+        Song s4 = new Song("The reason", a4, MusicGenre.ALTERNATIVE_ROCK);
 
         Artist a5 = new Artist("Scorpions");
-        Song s5 = new Song("Rock you like a hurricane", a5, g4);
+        Song s5 = new Song("Rock you like a hurricane", a5, MusicGenre.HARD_ROCK);
 
         Playlist p = new Playlist(1);
 
