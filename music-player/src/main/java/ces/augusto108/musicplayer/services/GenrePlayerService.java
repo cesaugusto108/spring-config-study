@@ -26,22 +26,22 @@ public abstract class GenrePlayerService implements PlayerService {
             songs.add(artistSongEntry.getValue());
         }
 
-        List<Song> alternativeRockSongs = new ArrayList<>();
+        List<Song> genreSongs = new ArrayList<>();
 
         for (Song song : songs) {
-            if (song.getGenre().equals(getGenre())) alternativeRockSongs.add(song);
+            if (song.getGenre().equals(getGenre())) genreSongs.add(song);
         }
 
         System.out.println("\n" + playerBootstrap.getPlaylist() + ":");
 
         System.out.println("\nNow playing: ");
 
-        System.out.println(alternativeRockSongs.get(0));
+        System.out.println(genreSongs.get(0));
 
         System.out.println("\nUp next:");
 
-        for (int i = 1; i < alternativeRockSongs.size(); i++) {
-            System.out.println(alternativeRockSongs.get(i));
+        for (int i = 1; i < genreSongs.size(); i++) {
+            System.out.println(genreSongs.get(i));
         }
     }
 
