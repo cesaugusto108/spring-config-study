@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: MusicPlayer
+  profiles:
+    active: hard, qa
