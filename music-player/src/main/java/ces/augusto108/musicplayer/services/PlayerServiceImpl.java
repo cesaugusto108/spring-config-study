@@ -36,5 +36,7 @@ public class PlayerServiceImpl implements PlayerService {
         for (int i = 1; i < songs.size(); i++) {
             System.out.println(songs.get(i));
         }
+
+        System.out.println();
     }
 }

@@ -43,6 +43,8 @@ public abstract class GenrePlayerService implements PlayerService {
         for (int i = 1; i < genreSongs.size(); i++) {
             System.out.println(genreSongs.get(i));
         }
+
+        System.out.println();
     }
 
     abstract MusicGenre getGenre();

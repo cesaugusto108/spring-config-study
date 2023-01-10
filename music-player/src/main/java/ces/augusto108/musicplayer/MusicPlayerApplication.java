@@ -1,6 +1,9 @@
 package ces.augusto108.musicplayer;
 
+import ces.augusto108.musicplayer.config.AppProfile;
 import ces.augusto108.musicplayer.controllers.PlayerController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,5 +18,15 @@ public class MusicPlayerApplication {
         PlayerController playerController = (PlayerController) applicationContext.getBean("playerController");
 
         playerController.getPlaylist();
+
+        //
+
+        AppProfile appProfile = (AppProfile) applicationContext.getBean("appProfile");
+
+        final Logger logger = LoggerFactory.getLogger("MusicPlayerApplication");
+
+        logger.info(
+                "Application info: Name: " + appProfile.getAppName() + " / Profile: " + appProfile.getProfile()
+        );
     }
 }
