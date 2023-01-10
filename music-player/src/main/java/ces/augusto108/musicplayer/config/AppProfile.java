@@ -1,15 +1,15 @@
 package ces.augusto108.musicplayer.config;
 
 public class AppProfile {
-    private String appName;
+    private String applicationName;
     private String profile;
 
-    public String getAppName() {
-        return appName;
+    public String getApplicationName() {
+        return applicationName;
     }
 
-    public void setAppName(String appName) {
-        this.appName = appName;
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
     }
 
     public String getProfile() {

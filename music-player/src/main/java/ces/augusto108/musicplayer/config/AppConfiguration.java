@@ -11,12 +11,12 @@ import org.springframework.context.annotation.Profile;
 public class AppConfiguration {
     @Bean
     AppProfile appProfile(
-            @Value("${spring.application.name}") String appName,
+            PropertyBind propertyBind,
             @Value("${spring.profiles.active}") String profile
     ) {
         AppProfile appProfile = new AppProfile();
 
-        appProfile.setAppName(appName);
+        appProfile.setApplicationName(propertyBind.getName());
         appProfile.setProfile(profile);
 
         return appProfile;
