@@ -3,12 +3,19 @@ package ces.augusto108.musicplayer.config;
 import ces.augusto108.musicplayer.bootstrap.PlayerBootstrap;
 import ces.augusto108.musicplayer.services.*;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class AppConfiguration {
+    @Bean
+    @ConfigurationProperties("spring.application")
+    PropertyBind propertyBind() {
+        return new PropertyBind();
+    }
+
     @Bean
     AppProfile appProfile(
             PropertyBind propertyBind,

@@ -22,9 +22,9 @@ public class MusicPlayerApplication {
 
         //
 
-        AppProfile appProfile = (AppProfile) applicationContext.getBean("appProfile");
-
         final Logger logger = LoggerFactory.getLogger("MusicPlayerApplication");
+
+        AppProfile appProfile = (AppProfile) applicationContext.getBean("appProfile");
 
         logger.info(
                 "Application info: Name: " + appProfile.getApplicationName() + " / Profile: " + appProfile.getProfile()
