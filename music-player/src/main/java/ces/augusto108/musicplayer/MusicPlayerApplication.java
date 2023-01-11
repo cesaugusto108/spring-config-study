@@ -1,7 +1,6 @@
 package ces.augusto108.musicplayer;
 
 import ces.augusto108.musicplayer.config.AppProfile;
-import ces.augusto108.musicplayer.config.PropertyBind;
 import ces.augusto108.musicplayer.controllers.PlayerController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,12 +27,6 @@ public class MusicPlayerApplication {
 
         logger.info(
                 "Application info: Name: " + appProfile.getApplicationName() + " / Profile: " + appProfile.getProfile()
-        );
-
-        PropertyBind propertyBind = (PropertyBind) applicationContext.getBean("propertyBind");
-
-        logger.info(
-                "Application properties bind: Name: " + propertyBind.getName()
         );
     }
 }
